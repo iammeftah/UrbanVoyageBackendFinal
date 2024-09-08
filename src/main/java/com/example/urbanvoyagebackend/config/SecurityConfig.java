@@ -73,7 +73,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authz -> authz
                         .requestMatchers("/api/auth/**", "/error", "/oauth2/**").permitAll()
                         .requestMatchers("/api/routes/**", "/api/reservations/availableSeats", "/api/users/public/**", "/api/schedules/public/**").permitAll()
-                        .requestMatchers("/api/payment/public/**", "/api/passengers/public/**", "/api/translate/**").permitAll()
+                        .requestMatchers("/api/payment/**", "/api/passengers/**", "/api/translate/**").permitAll()
                         .requestMatchers("/api/contact-messages/**", "/api/contacts/**", "/api/destinations/**").permitAll()
                         .requestMatchers("/api/background-image/**", "/api/reset-password/**", "/api/faqs/**").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/reservations/create").permitAll()
